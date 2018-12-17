@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kitri.carpool.car.CarDao">
+
+	<resultMap id="carResult" type="com.kitri.carpool.car.Car">
+		<result column="owner" property="owner" />
+		<result column="license" property="license" />
+		<result column="numner_plate" property="numner_plate" />
+		<result column="mileage" property="mileage" />
+		<result column="age" property="age" />
+		<result column="car_name" property="car_name" />
+		<result column="car_size" property="car_size" />
+	</resultMap>
+	
+	<insert id="insert" parameterType="com.kitri.carpool.car.Car">
+		insert into c_car values(#{owner}, #{license}, #{number_plate}, #{mileage}, TO_DATE(#{age},'yyyy'), #{car_name}, #{car_size})
+	</insert>
+	<update id="update" parameterType="com.kitri.carpool.car.Car">
+		update c_car set title=#{title}, license=#{license}, number_plate=#{numner_plate}, mileage=#{mileage}, age=#{age}, car_name=#{car_name}, car_size=#{car_size} where owner=#{owner}
+	</update>
+	<delete id="delete" parameterType="String">
+		delete c_car where owner=#{owner}
+	</delete>
+	<select id="select" parameterType="String" resultMap="carResult">
+		select * from c_car where owner=#{owner}
+	</select>
+	<select id="selectAll" resultMap="carResult">
+		select * from c_car
+	</select>
+
+</mapper>

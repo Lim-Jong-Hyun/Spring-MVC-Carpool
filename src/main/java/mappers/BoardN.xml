@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kitri.carpool.boardN.BoardNDao">
+
+	<resultMap id="boardNResult" type="com.kitri.carpool.boardN.BoardN">
+		<result column="num" property="num" />
+		<result column="w_date" property="w_date" />
+		<result column="title" property="title" />
+		<result column="content" property="content" />
+		<result column="writer" property="writer" />
+	</resultMap>
+	
+	<insert id="insert" parameterType="com.kitri.carpool.boardN.BoardN">
+		insert into c_BoardN values(seq_c_boardn.nextval, sysdate, #{title}, #{content},#{writer})
+	</insert>
+	<update id="update" parameterType="com.kitri.carpool.boardN.BoardN">
+		update c_BoardN set title=#{title}, content=#{content}, writer=#{writer}
+		where num=#{num}
+	</update>
+	<delete id="delete" parameterType="int">
+		delete c_BoardN where num=#{num}
+	</delete>
+	<select id="selectByNum" parameterType="int" resultMap="boardNResult">
+		select * from c_BoardN where num=#{num}
+	</select>
+	<select id="selectAll" resultMap="boardNResult">
+		select * from c_BoardN order by num
+	</select>
+
+</mapper>

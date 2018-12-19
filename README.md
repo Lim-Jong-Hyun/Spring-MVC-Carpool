@@ -46,5 +46,6 @@ Driver, Passenger, Admin으로 나누어지며 Driver-Passenger를 연결시키�
 
 
 9. 사용자 페이지 (상단 -> ID 클릭시)
+
 개인정보 조회, 개인정보 수정, 차량 등록, 파트너 보기, 계정삭제, Profile 변경 기능 가능 (Screen Shot 생략) 
 

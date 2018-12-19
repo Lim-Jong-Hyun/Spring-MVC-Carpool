@@ -6,10 +6,9 @@ Driver, Passenger, Admin으로 나누어지며 Driver-Passenger를 연결시키�
 
 ## 사용언어 및 환경 
 * 환경 : Window OS, Eclipse IDE Photon Release (4.8.0), java 9, jdk1.8, apache Tomcat 9.0, Oracle Database System
-* 사용언어: JAVA, Servlet, HTML, CSS, JAVASCRIPT, ORACLE SQL, JSP, JQUERY, AJAX
-* 활용 API : 네이버 지도 APIv3 , 네이버 Captcha, Google Chart, Google SMTP Server, Modal, Openweather, Tiles  
-* 모델 : EL & JSTL, MVC 패턴 2
-* Framwork : Spring 4 (Ecilpse 기반), Mybatis, Bootstrap
+* 사용언어: JAVA, Servlet, HTML, CSS, JAVASCRIPT, ORACLE SQL(Mybatis), JSP, JQUERY, AJAX
+* 활용 API :  Bootstrap, 네이버 지도 APIv3 , 네이버 Captcha, Google Chart, Google SMTP Server, Modal, Openweather, Tiles  
+* 모델 : EL & JSTL, MVC 패턴 2, Spring 4 (Ecilpse 기반)
 
 ## 주요 기능 (Screen Shot)
 
